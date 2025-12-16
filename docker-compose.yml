@@ -1,59 +1,57 @@
 version: "3.9"
 
 services:
-  origin_db:
+  root_db:
     image: postgres:16
-    container_name: origin_db
+    container_name: root_db
     environment:
-      POSTGRES_DB: PTHSP
+      POSTGRES_DB: PTHSP_backup
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     ports:
       - "5433:5432"        # expose ra ngoài nếu cần
     volumes:
-      - origin_db_data:/var/lib/postgresql/data
+      - root_db_data:/var/lib/postgresql/data
     restart: unless-stopped
 
-  ultimate_db:
+  vector_db:
     image: postgres:16
-    container_name: ultimate_db
+    container_name: vector_db
     environment:
-      POSTGRES_DB: ultimate_advisor
+      POSTGRES_DB: vectorDB
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     ports:
       - "5434:5432"
     volumes:
-      - ultimate_db_data:/var/lib/postgresql/data
+      - vector_db_data:/var/lib/postgresql/data
     restart: unless-stopped
 
-  ollama:
-    image: ollama/ollama:latest
-    container_name: ollama
-    ports:
-      - "11434:11434"
-    volumes:
-      - ollama_data:/root/.ollama
-      - ./ollama-entrypoint.sh:/usr/local/bin/ollama-entrypoint.sh
-    entrypoint: ["/usr/local/bin/ollama-entrypoint.sh"]
-    restart: unless-stopped
+  # ollama:
+  #   image: ollama/ollama:latest
+  #   container_name: ollama
+  #   ports:
+  #     - "11434:11434"
+  #   volumes:
+  #     - ollama_data:/root/.ollama
+  #     - ./ollama-entrypoint.sh:/usr/local/bin/ollama-entrypoint.sh
+  #   entrypoint: ["/usr/local/bin/ollama-entrypoint.sh"]
+  #   restart: unless-stopped
 
   app:
     build:
       context: .
     container_name: rag_vector_app
-    env_file:
-      - .env
     depends_on:
-      - origin_db
-      - ultimate_db
-      - ollama
+      - root_db
+      - vector_db
+      # - ollama
     command: ["python", "-m", "app.main"]
     volumes:
       - ./:/app
     restart: unless-stopped
 
 volumes:
-  origin_db_data:
-  ultimate_db_data:
-  ollama_data:
+  root_db_data:
+  vector_db_data:
+  # ollama_data:

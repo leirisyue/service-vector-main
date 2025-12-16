@@ -1,0 +1,575 @@
+2025-12-16 06:38:58 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 06:38:58 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 06:38:58 [INFO] [app.db] Found 1 tables in origin DB: ['materials']
+2025-12-16 06:38:58 [INFO] [__main__] === Start processing table: materials ===
+2025-12-16 06:38:58 [INFO] [app.db] Ensuring target table exists: materials
+2025-12-16 06:38:58 [INFO] [app.db] Table materials is ready in target DB
+2025-12-16 06:38:58 [INFO] [app.db] Fetching ALL rows from origin table materials
+2025-12-16 06:38:58 [INFO] [app.db] Fetched 70 rows from origin table materials
+2025-12-16 06:38:58 [INFO] [__main__] Total rows to process in materials: 70
+2025-12-16 06:42:01 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 06:42:01 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 06:42:01 [INFO] [app.db] Found 1 tables in origin DB: ['materials']
+2025-12-16 06:42:01 [INFO] [__main__] === Start processing table: materials ===
+2025-12-16 06:42:01 [INFO] [app.db] Ensuring target table exists: materials
+2025-12-16 06:42:01 [INFO] [app.db] Table materials is ready in target DB
+2025-12-16 06:42:01 [INFO] [app.db] Fetching ALL rows from origin table materials
+2025-12-16 06:42:01 [INFO] [app.db] Fetched 70 rows from origin table materials
+2025-12-16 06:42:01 [INFO] [__main__] Total rows to process in materials: 70
+2025-12-16 08:41:51 [INFO] [app.db] Origin DB connected to root_db:5432/PTHSP_backup, Target DB connected to vector_db:5432/vectorDB
+2025-12-16 08:41:52 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 08:41:52 [INFO] [app.db] Found 0 tables in origin DB: []
+2025-12-16 08:41:52 [INFO] [__main__] All tables processed successfully
+2025-12-16 08:41:52 [INFO] [app.db] Origin DB connected to root_db:5432/PTHSP_backup, Target DB connected to vector_db:5432/vectorDB
+2025-12-16 08:41:52 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 08:41:52 [INFO] [app.db] Found 0 tables in origin DB: []
+2025-12-16 08:41:52 [INFO] [__main__] All tables processed successfully
+2025-12-16 08:41:53 [INFO] [app.db] Origin DB connected to root_db:5432/PTHSP_backup, Target DB connected to vector_db:5432/vectorDB
+2025-12-16 08:41:53 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 08:41:53 [INFO] [app.db] Found 0 tables in origin DB: []
+2025-12-16 08:41:53 [INFO] [__main__] All tables processed successfully
+2025-12-16 08:41:54 [INFO] [app.db] Origin DB connected to root_db:5432/PTHSP_backup, Target DB connected to vector_db:5432/vectorDB
+2025-12-16 08:41:54 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 08:41:54 [INFO] [app.db] Found 0 tables in origin DB: []
+2025-12-16 08:41:54 [INFO] [__main__] All tables processed successfully
+2025-12-16 08:41:55 [INFO] [app.db] Origin DB connected to root_db:5432/PTHSP_backup, Target DB connected to vector_db:5432/vectorDB
+2025-12-16 08:41:55 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 08:41:55 [INFO] [app.db] Found 0 tables in origin DB: []
+2025-12-16 08:41:55 [INFO] [__main__] All tables processed successfully
+2025-12-16 08:41:57 [INFO] [app.db] Origin DB connected to root_db:5432/PTHSP_backup, Target DB connected to vector_db:5432/vectorDB
+2025-12-16 08:41:57 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 08:41:57 [INFO] [app.db] Found 0 tables in origin DB: []
+2025-12-16 08:41:57 [INFO] [__main__] All tables processed successfully
+2025-12-16 08:42:01 [INFO] [app.db] Origin DB connected to root_db:5432/PTHSP_backup, Target DB connected to vector_db:5432/vectorDB
+2025-12-16 08:42:01 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 08:42:01 [INFO] [app.db] Found 0 tables in origin DB: []
+2025-12-16 08:42:01 [INFO] [__main__] All tables processed successfully
+2025-12-16 08:44:39 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 08:44:39 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 08:44:39 [INFO] [app.db] Found 1 tables in origin DB: ['materials']
+2025-12-16 08:44:39 [INFO] [__main__] === Start processing table: materials ===
+2025-12-16 08:44:39 [INFO] [app.db] Ensuring target table exists: materials
+2025-12-16 08:44:39 [INFO] [app.db] Table materials is ready in target DB
+2025-12-16 08:44:39 [INFO] [app.db] Fetching ALL rows from origin table materials
+2025-12-16 08:44:39 [INFO] [app.db] Fetched 70 rows from origin table materials
+2025-12-16 08:44:39 [INFO] [__main__] Total rows to process in materials: 70
+2025-12-16 08:45:21 [ERROR] [__main__] Failed to generate embedding for row 24 in table materials
+Traceback (most recent call last):
+  File "/app/app/main.py", line 43, in process_table
+    embedding = embedding_service.embed(content_text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/embedding_service.py", line 23, in embed
+    raise RuntimeError(
+RuntimeError: Ollama embedding failed. Status: 500, Body: {"error":"the input length exceeds the context length"}
+2025-12-16 08:45:47 [ERROR] [__main__] Failed to generate embedding for row 46 in table materials
+Traceback (most recent call last):
+  File "/app/app/main.py", line 43, in process_table
+    embedding = embedding_service.embed(content_text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/embedding_service.py", line 23, in embed
+    raise RuntimeError(
+RuntimeError: Ollama embedding failed. Status: 500, Body: {"error":"the input length exceeds the context length"}
+2025-12-16 08:45:50 [ERROR] [__main__] Failed to generate embedding for row 48 in table materials
+Traceback (most recent call last):
+  File "/app/app/main.py", line 43, in process_table
+    embedding = embedding_service.embed(content_text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/embedding_service.py", line 23, in embed
+    raise RuntimeError(
+RuntimeError: Ollama embedding failed. Status: 500, Body: {"error":"the input length exceeds the context length"}
+2025-12-16 08:45:50 [ERROR] [__main__] Failed to generate embedding for row 50 in table materials
+Traceback (most recent call last):
+  File "/app/app/main.py", line 43, in process_table
+    embedding = embedding_service.embed(content_text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/embedding_service.py", line 23, in embed
+    raise RuntimeError(
+RuntimeError: Ollama embedding failed. Status: 500, Body: {"error":"the input length exceeds the context length"}
+2025-12-16 08:45:56 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 08:45:56 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 08:45:56 [INFO] [app.db] Found 1 tables in origin DB: ['materials']
+2025-12-16 08:45:56 [INFO] [__main__] === Start processing table: materials ===
+2025-12-16 08:45:56 [INFO] [app.db] Ensuring target table exists: materials
+2025-12-16 08:45:56 [INFO] [app.db] Table materials is ready in target DB
+2025-12-16 08:45:56 [INFO] [app.db] Fetching ALL rows from origin table materials
+2025-12-16 08:45:56 [INFO] [app.db] Fetched 70 rows from origin table materials
+2025-12-16 08:45:56 [INFO] [__main__] Total rows to process in materials: 70
+2025-12-16 08:46:23 [ERROR] [__main__] Failed to generate embedding for row 24 in table materials
+Traceback (most recent call last):
+  File "/app/app/main.py", line 43, in process_table
+    embedding = embedding_service.embed(content_text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/embedding_service.py", line 23, in embed
+    raise RuntimeError(
+RuntimeError: Ollama embedding failed. Status: 500, Body: {"error":"the input length exceeds the context length"}
+2025-12-16 08:47:19 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 08:47:20 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 08:47:21 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 08:47:22 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 08:47:23 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 08:47:25 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 08:47:29 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 08:47:36 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 08:47:49 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 08:48:15 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 08:49:07 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 08:50:53 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 08:50:53 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 08:50:53 [INFO] [app.db] Found 1 tables in origin DB: ['materials']
+2025-12-16 08:50:53 [INFO] [__main__] === Start processing table: materials ===
+2025-12-16 08:50:53 [INFO] [app.db] Ensuring target table exists: materials
+2025-12-16 08:50:53 [INFO] [app.db] Table materials is ready in target DB
+2025-12-16 08:50:53 [INFO] [app.db] Fetching ALL rows from origin table materials
+2025-12-16 08:50:53 [INFO] [app.db] Fetched 70 rows from origin table materials
+2025-12-16 08:50:53 [INFO] [__main__] Total rows to process in materials: 70
+2025-12-16 08:51:20 [ERROR] [__main__] Failed to generate embedding for row 24 in table materials
+Traceback (most recent call last):
+  File "/app/app/main.py", line 43, in process_table
+    embedding = embedding_service.embed(content_text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/embedding_service.py", line 23, in embed
+    raise RuntimeError(
+RuntimeError: Ollama embedding failed. Status: 500, Body: {"error":"the input length exceeds the context length"}
+2025-12-16 08:51:46 [ERROR] [__main__] Failed to generate embedding for row 46 in table materials
+Traceback (most recent call last):
+  File "/app/app/main.py", line 43, in process_table
+    embedding = embedding_service.embed(content_text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/embedding_service.py", line 23, in embed
+    raise RuntimeError(
+RuntimeError: Ollama embedding failed. Status: 500, Body: {"error":"the input length exceeds the context length"}
+2025-12-16 08:51:49 [ERROR] [__main__] Failed to generate embedding for row 48 in table materials
+Traceback (most recent call last):
+  File "/app/app/main.py", line 43, in process_table
+    embedding = embedding_service.embed(content_text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/embedding_service.py", line 23, in embed
+    raise RuntimeError(
+RuntimeError: Ollama embedding failed. Status: 500, Body: {"error":"the input length exceeds the context length"}
+2025-12-16 08:51:49 [ERROR] [__main__] Failed to generate embedding for row 50 in table materials
+Traceback (most recent call last):
+  File "/app/app/main.py", line 43, in process_table
+    embedding = embedding_service.embed(content_text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/embedding_service.py", line 23, in embed
+    raise RuntimeError(
+RuntimeError: Ollama embedding failed. Status: 500, Body: {"error":"the input length exceeds the context length"}
+2025-12-16 08:51:55 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 08:51:55 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 08:51:55 [INFO] [app.db] Found 1 tables in origin DB: ['materials']
+2025-12-16 08:51:55 [INFO] [__main__] === Start processing table: materials ===
+2025-12-16 08:51:55 [INFO] [app.db] Ensuring target table exists: materials
+2025-12-16 08:51:55 [INFO] [app.db] Table materials is ready in target DB
+2025-12-16 08:51:55 [INFO] [app.db] Fetching ALL rows from origin table materials
+2025-12-16 08:51:55 [INFO] [app.db] Fetched 70 rows from origin table materials
+2025-12-16 08:51:55 [INFO] [__main__] Total rows to process in materials: 70
+2025-12-16 08:52:22 [ERROR] [__main__] Failed to generate embedding for row 24 in table materials
+Traceback (most recent call last):
+  File "/app/app/main.py", line 43, in process_table
+    embedding = embedding_service.embed(content_text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/embedding_service.py", line 23, in embed
+    raise RuntimeError(
+RuntimeError: Ollama embedding failed. Status: 500, Body: {"error":"the input length exceeds the context length"}
+2025-12-16 08:52:48 [ERROR] [__main__] Failed to generate embedding for row 46 in table materials
+Traceback (most recent call last):
+  File "/app/app/main.py", line 43, in process_table
+    embedding = embedding_service.embed(content_text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/embedding_service.py", line 23, in embed
+    raise RuntimeError(
+RuntimeError: Ollama embedding failed. Status: 500, Body: {"error":"the input length exceeds the context length"}
+2025-12-16 08:52:51 [ERROR] [__main__] Failed to generate embedding for row 48 in table materials
+Traceback (most recent call last):
+  File "/app/app/main.py", line 43, in process_table
+    embedding = embedding_service.embed(content_text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/embedding_service.py", line 23, in embed
+    raise RuntimeError(
+RuntimeError: Ollama embedding failed. Status: 500, Body: {"error":"the input length exceeds the context length"}
+2025-12-16 08:52:51 [ERROR] [__main__] Failed to generate embedding for row 50 in table materials
+Traceback (most recent call last):
+  File "/app/app/main.py", line 43, in process_table
+    embedding = embedding_service.embed(content_text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/embedding_service.py", line 23, in embed
+    raise RuntimeError(
+RuntimeError: Ollama embedding failed. Status: 500, Body: {"error":"the input length exceeds the context length"}
+2025-12-16 08:52:57 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 08:52:57 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 08:52:57 [INFO] [app.db] Found 1 tables in origin DB: ['materials']
+2025-12-16 08:52:57 [INFO] [__main__] === Start processing table: materials ===
+2025-12-16 08:52:57 [INFO] [app.db] Ensuring target table exists: materials
+2025-12-16 08:52:57 [INFO] [app.db] Table materials is ready in target DB
+2025-12-16 08:52:57 [INFO] [app.db] Fetching ALL rows from origin table materials
+2025-12-16 08:52:57 [INFO] [app.db] Fetched 70 rows from origin table materials
+2025-12-16 08:52:57 [INFO] [__main__] Total rows to process in materials: 70
+2025-12-16 08:53:24 [ERROR] [__main__] Failed to generate embedding for row 24 in table materials
+Traceback (most recent call last):
+  File "/app/app/main.py", line 43, in process_table
+    embedding = embedding_service.embed(content_text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/embedding_service.py", line 23, in embed
+    raise RuntimeError(
+RuntimeError: Ollama embedding failed. Status: 500, Body: {"error":"the input length exceeds the context length"}
+2025-12-16 08:53:50 [ERROR] [__main__] Failed to generate embedding for row 46 in table materials
+Traceback (most recent call last):
+  File "/app/app/main.py", line 43, in process_table
+    embedding = embedding_service.embed(content_text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/embedding_service.py", line 23, in embed
+    raise RuntimeError(
+RuntimeError: Ollama embedding failed. Status: 500, Body: {"error":"the input length exceeds the context length"}
+2025-12-16 08:53:53 [ERROR] [__main__] Failed to generate embedding for row 48 in table materials
+Traceback (most recent call last):
+  File "/app/app/main.py", line 43, in process_table
+    embedding = embedding_service.embed(content_text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/embedding_service.py", line 23, in embed
+    raise RuntimeError(
+RuntimeError: Ollama embedding failed. Status: 500, Body: {"error":"the input length exceeds the context length"}
+2025-12-16 08:53:54 [ERROR] [__main__] Failed to generate embedding for row 50 in table materials
+Traceback (most recent call last):
+  File "/app/app/main.py", line 43, in process_table
+    embedding = embedding_service.embed(content_text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/embedding_service.py", line 23, in embed
+    raise RuntimeError(
+RuntimeError: Ollama embedding failed. Status: 500, Body: {"error":"the input length exceeds the context length"}
+2025-12-16 08:53:59 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 08:53:59 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 08:54:00 [INFO] [app.db] Found 1 tables in origin DB: ['materials']
+2025-12-16 08:54:00 [INFO] [__main__] === Start processing table: materials ===
+2025-12-16 08:54:00 [INFO] [app.db] Ensuring target table exists: materials
+2025-12-16 08:54:00 [INFO] [app.db] Table materials is ready in target DB
+2025-12-16 08:54:00 [INFO] [app.db] Fetching ALL rows from origin table materials
+2025-12-16 08:54:00 [INFO] [app.db] Fetched 70 rows from origin table materials
+2025-12-16 08:54:00 [INFO] [__main__] Total rows to process in materials: 70
+2025-12-16 09:01:17 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 09:01:17 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 09:01:17 [INFO] [app.db] Found 1 tables in origin DB: ['materials']
+2025-12-16 09:01:17 [INFO] [__main__] === Start processing table: materials ===
+2025-12-16 09:01:17 [INFO] [app.db] Ensuring target table exists: materials
+2025-12-16 09:01:17 [INFO] [app.db] Table materials is ready in target DB
+2025-12-16 09:01:17 [INFO] [app.db] Fetching ALL rows from origin table materials
+2025-12-16 09:01:17 [INFO] [app.db] Fetched 70 rows from origin table materials
+2025-12-16 09:01:17 [INFO] [__main__] Total rows to process in materials: 70
+2025-12-16 09:03:22 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 09:03:22 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 09:03:22 [INFO] [app.db] Found 1 tables in origin DB: ['materials']
+2025-12-16 09:03:22 [INFO] [__main__] === Start processing table: materials ===
+2025-12-16 09:03:22 [INFO] [app.db] Ensuring target table exists: materials
+2025-12-16 09:03:22 [INFO] [app.db] Table materials is ready in target DB
+2025-12-16 09:03:22 [INFO] [app.db] Fetching ALL rows from origin table materials
+2025-12-16 09:03:22 [INFO] [app.db] Fetched 70 rows from origin table materials
+2025-12-16 09:03:22 [INFO] [__main__] Total rows to process in materials: 70
+2025-12-16 09:05:25 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 09:05:25 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 09:05:25 [INFO] [app.db] Found 1 tables in origin DB: ['materials']
+2025-12-16 09:05:25 [INFO] [__main__] === Start processing table: materials ===
+2025-12-16 09:05:25 [INFO] [app.db] Ensuring target table exists: materials
+2025-12-16 09:05:25 [INFO] [app.db] Table materials is ready in target DB
+2025-12-16 09:05:25 [INFO] [app.db] Fetching ALL rows from origin table materials
+2025-12-16 09:05:25 [INFO] [app.db] Fetched 70 rows from origin table materials
+2025-12-16 09:05:25 [INFO] [__main__] Total rows to process in materials: 70
+2025-12-16 09:07:29 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 09:07:30 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 09:07:30 [INFO] [app.db] Found 1 tables in origin DB: ['materials']
+2025-12-16 09:07:30 [INFO] [__main__] === Start processing table: materials ===
+2025-12-16 09:07:30 [INFO] [app.db] Ensuring target table exists: materials
+2025-12-16 09:07:30 [INFO] [app.db] Table materials is ready in target DB
+2025-12-16 09:07:30 [INFO] [app.db] Fetching ALL rows from origin table materials
+2025-12-16 09:07:30 [INFO] [app.db] Fetched 70 rows from origin table materials
+2025-12-16 09:07:30 [INFO] [__main__] Total rows to process in materials: 70
+2025-12-16 09:09:34 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 09:09:34 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 09:09:34 [INFO] [app.db] Found 1 tables in origin DB: ['materials']
+2025-12-16 09:09:34 [INFO] [__main__] === Start processing table: materials ===
+2025-12-16 09:09:34 [INFO] [app.db] Ensuring target table exists: materials
+2025-12-16 09:09:34 [INFO] [app.db] Table materials is ready in target DB
+2025-12-16 09:09:34 [INFO] [app.db] Fetching ALL rows from origin table materials
+2025-12-16 09:09:34 [INFO] [app.db] Fetched 70 rows from origin table materials
+2025-12-16 09:09:34 [INFO] [__main__] Total rows to process in materials: 70
+2025-12-16 09:11:38 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 09:11:39 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 09:11:39 [INFO] [app.db] Found 1 tables in origin DB: ['materials']
+2025-12-16 09:11:39 [INFO] [__main__] === Start processing table: materials ===
+2025-12-16 09:11:39 [INFO] [app.db] Ensuring target table exists: materials
+2025-12-16 09:11:39 [INFO] [app.db] Table materials is ready in target DB
+2025-12-16 09:11:39 [INFO] [app.db] Fetching ALL rows from origin table materials
+2025-12-16 09:11:39 [INFO] [app.db] Fetched 70 rows from origin table materials
+2025-12-16 09:11:39 [INFO] [__main__] Total rows to process in materials: 70
+2025-12-16 09:13:42 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 09:13:42 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 09:13:42 [INFO] [app.db] Found 1 tables in origin DB: ['materials']
+2025-12-16 09:13:42 [INFO] [__main__] === Start processing table: materials ===
+2025-12-16 09:13:42 [INFO] [app.db] Ensuring target table exists: materials
+2025-12-16 09:13:42 [INFO] [app.db] Table materials is ready in target DB
+2025-12-16 09:13:42 [INFO] [app.db] Fetching ALL rows from origin table materials
+2025-12-16 09:13:42 [INFO] [app.db] Fetched 70 rows from origin table materials
+2025-12-16 09:13:42 [INFO] [__main__] Total rows to process in materials: 70
+2025-12-16 09:15:46 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 09:15:46 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 09:15:46 [INFO] [app.db] Found 1 tables in origin DB: ['materials']
+2025-12-16 09:15:46 [INFO] [__main__] === Start processing table: materials ===
+2025-12-16 09:15:46 [INFO] [app.db] Ensuring target table exists: materials
+2025-12-16 09:15:47 [INFO] [app.db] Table materials is ready in target DB
+2025-12-16 09:15:47 [INFO] [app.db] Fetching ALL rows from origin table materials
+2025-12-16 09:15:47 [INFO] [app.db] Fetched 70 rows from origin table materials
+2025-12-16 09:15:47 [INFO] [__main__] Total rows to process in materials: 70
+2025-12-16 09:17:50 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 09:17:50 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 09:17:50 [INFO] [app.db] Found 1 tables in origin DB: ['materials']
+2025-12-16 09:17:50 [INFO] [__main__] === Start processing table: materials ===
+2025-12-16 09:17:50 [INFO] [app.db] Ensuring target table exists: materials
+2025-12-16 09:17:50 [INFO] [app.db] Table materials is ready in target DB
+2025-12-16 09:17:50 [INFO] [app.db] Fetching ALL rows from origin table materials
+2025-12-16 09:17:50 [INFO] [app.db] Fetched 70 rows from origin table materials
+2025-12-16 09:17:50 [INFO] [__main__] Total rows to process in materials: 70
+2025-12-16 09:19:56 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 09:19:56 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 09:19:56 [INFO] [app.db] Found 1 tables in origin DB: ['materials']
+2025-12-16 09:19:56 [INFO] [__main__] === Start processing table: materials ===
+2025-12-16 09:19:56 [INFO] [app.db] Ensuring target table exists: materials
+2025-12-16 09:19:56 [INFO] [app.db] Table materials is ready in target DB
+2025-12-16 09:19:56 [INFO] [app.db] Fetching ALL rows from origin table materials
+2025-12-16 09:19:56 [INFO] [app.db] Fetched 70 rows from origin table materials
+2025-12-16 09:19:56 [INFO] [__main__] Total rows to process in materials: 70
+2025-12-16 09:21:58 [INFO] [app.db] Inserting 50 vector rows into target table materials
+2025-12-16 09:21:59 [INFO] [app.db] Inserted 50 rows into materials successfully
+2025-12-16 09:21:59 [INFO] [__main__] [materials] Inserted batch of 50 rows (up to row 50)
+2025-12-16 09:22:18 [INFO] [app.db] Inserting 20 vector rows into target table materials
+2025-12-16 09:22:18 [INFO] [app.db] Inserted 20 rows into materials successfully
+2025-12-16 09:22:18 [INFO] [__main__] [materials] Inserted final batch of 20 rows
+2025-12-16 09:22:18 [INFO] [__main__] === Done processing table: materials ===
+2025-12-16 09:22:18 [INFO] [__main__] All tables processed successfully
+2025-12-16 09:22:19 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 09:22:19 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 09:22:19 [INFO] [app.db] Found 1 tables in origin DB: ['materials']
+2025-12-16 09:22:19 [INFO] [__main__] === Start processing table: materials ===
+2025-12-16 09:22:19 [INFO] [app.db] Ensuring target table exists: materials
+2025-12-16 09:22:19 [INFO] [app.db] Table materials is ready in target DB
+2025-12-16 09:22:19 [INFO] [app.db] Fetching ALL rows from origin table materials
+2025-12-16 09:22:19 [INFO] [app.db] Fetched 70 rows from origin table materials
+2025-12-16 09:22:19 [INFO] [__main__] Total rows to process in materials: 70
+2025-12-16 09:24:22 [INFO] [app.db] Inserting 50 vector rows into target table materials
+2025-12-16 09:24:23 [INFO] [app.db] Inserted 50 rows into materials successfully
+2025-12-16 09:24:23 [INFO] [__main__] [materials] Inserted batch of 50 rows (up to row 50)
+2025-12-16 09:24:43 [INFO] [app.db] Inserting 20 vector rows into target table materials
+2025-12-16 09:24:43 [INFO] [app.db] Inserted 20 rows into materials successfully
+2025-12-16 09:24:43 [INFO] [__main__] [materials] Inserted final batch of 20 rows
+2025-12-16 09:24:43 [INFO] [__main__] === Done processing table: materials ===
+2025-12-16 09:24:43 [INFO] [__main__] All tables processed successfully
+2025-12-16 09:24:43 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 09:24:43 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 09:24:44 [INFO] [app.db] Found 1 tables in origin DB: ['materials']
+2025-12-16 09:24:44 [INFO] [__main__] === Start processing table: materials ===
+2025-12-16 09:24:44 [INFO] [app.db] Ensuring target table exists: materials
+2025-12-16 09:24:44 [INFO] [app.db] Table materials is ready in target DB
+2025-12-16 09:24:44 [INFO] [app.db] Fetching ALL rows from origin table materials
+2025-12-16 09:24:44 [INFO] [app.db] Fetched 70 rows from origin table materials
+2025-12-16 09:24:44 [INFO] [__main__] Total rows to process in materials: 70
+2025-12-16 09:26:47 [INFO] [app.db] Inserting 50 vector rows into target table materials
+2025-12-16 09:26:48 [INFO] [app.db] Inserted 50 rows into materials successfully
+2025-12-16 09:26:48 [INFO] [__main__] [materials] Inserted batch of 50 rows (up to row 50)
+2025-12-16 09:27:08 [INFO] [app.db] Inserting 20 vector rows into target table materials
+2025-12-16 09:27:08 [INFO] [app.db] Inserted 20 rows into materials successfully
+2025-12-16 09:27:08 [INFO] [__main__] [materials] Inserted final batch of 20 rows
+2025-12-16 09:27:08 [INFO] [__main__] === Done processing table: materials ===
+2025-12-16 09:27:08 [INFO] [__main__] All tables processed successfully
+2025-12-16 09:27:08 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 09:27:08 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 09:27:09 [INFO] [app.db] Found 1 tables in origin DB: ['materials']
+2025-12-16 09:27:09 [INFO] [__main__] === Start processing table: materials ===
+2025-12-16 09:27:09 [INFO] [app.db] Ensuring target table exists: materials
+2025-12-16 09:27:09 [INFO] [app.db] Table materials is ready in target DB
+2025-12-16 09:27:09 [INFO] [app.db] Fetching ALL rows from origin table materials
+2025-12-16 09:27:09 [INFO] [app.db] Fetched 70 rows from origin table materials
+2025-12-16 09:27:09 [INFO] [__main__] Total rows to process in materials: 70
+2025-12-16 09:29:12 [INFO] [app.db] Inserting 50 vector rows into target table materials
+2025-12-16 09:29:13 [INFO] [app.db] Inserted 50 rows into materials successfully
+2025-12-16 09:29:13 [INFO] [__main__] [materials] Inserted batch of 50 rows (up to row 50)
+2025-12-16 09:29:33 [INFO] [app.db] Inserting 20 vector rows into target table materials
+2025-12-16 09:29:34 [INFO] [app.db] Inserted 20 rows into materials successfully
+2025-12-16 09:29:34 [INFO] [__main__] [materials] Inserted final batch of 20 rows
+2025-12-16 09:29:34 [INFO] [__main__] === Done processing table: materials ===
+2025-12-16 09:29:34 [INFO] [__main__] All tables processed successfully
+2025-12-16 09:29:34 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 09:29:34 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 09:29:34 [INFO] [app.db] Found 1 tables in origin DB: ['materials']
+2025-12-16 09:29:34 [INFO] [__main__] === Start processing table: materials ===
+2025-12-16 09:29:34 [INFO] [app.db] Ensuring target table exists: materials
+2025-12-16 09:29:34 [INFO] [app.db] Table materials is ready in target DB
+2025-12-16 09:29:34 [INFO] [app.db] Fetching ALL rows from origin table materials
+2025-12-16 09:29:34 [INFO] [app.db] Fetched 70 rows from origin table materials
+2025-12-16 09:29:34 [INFO] [__main__] Total rows to process in materials: 70
+2025-12-16 09:31:38 [INFO] [app.db] Inserting 50 vector rows into target table materials
+2025-12-16 09:31:39 [INFO] [app.db] Inserted 50 rows into materials successfully
+2025-12-16 09:31:39 [INFO] [__main__] [materials] Inserted batch of 50 rows (up to row 50)
+2025-12-16 09:31:59 [INFO] [app.db] Inserting 20 vector rows into target table materials
+2025-12-16 09:31:59 [INFO] [app.db] Inserted 20 rows into materials successfully
+2025-12-16 09:31:59 [INFO] [__main__] [materials] Inserted final batch of 20 rows
+2025-12-16 09:31:59 [INFO] [__main__] === Done processing table: materials ===
+2025-12-16 09:31:59 [INFO] [__main__] All tables processed successfully
+2025-12-16 09:32:00 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 09:32:00 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 09:32:00 [INFO] [app.db] Found 1 tables in origin DB: ['materials']
+2025-12-16 09:32:00 [INFO] [__main__] === Start processing table: materials ===
+2025-12-16 09:32:00 [INFO] [app.db] Ensuring target table exists: materials
+2025-12-16 09:32:00 [INFO] [app.db] Table materials is ready in target DB
+2025-12-16 09:32:00 [INFO] [app.db] Fetching ALL rows from origin table materials
+2025-12-16 09:32:00 [INFO] [app.db] Fetched 70 rows from origin table materials
+2025-12-16 09:32:00 [INFO] [__main__] Total rows to process in materials: 70
+2025-12-16 09:34:04 [INFO] [app.db] Inserting 50 vector rows into target table materials
+2025-12-16 09:34:05 [INFO] [app.db] Inserted 50 rows into materials successfully
+2025-12-16 09:34:05 [INFO] [__main__] [materials] Inserted batch of 50 rows (up to row 50)
+2025-12-16 09:34:24 [INFO] [app.db] Inserting 20 vector rows into target table materials
+2025-12-16 09:34:25 [INFO] [app.db] Inserted 20 rows into materials successfully
+2025-12-16 09:34:25 [INFO] [__main__] [materials] Inserted final batch of 20 rows
+2025-12-16 09:34:25 [INFO] [__main__] === Done processing table: materials ===
+2025-12-16 09:34:25 [INFO] [__main__] All tables processed successfully
+2025-12-16 09:34:25 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 09:34:25 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 09:34:25 [INFO] [app.db] Found 1 tables in origin DB: ['materials']
+2025-12-16 09:34:25 [INFO] [__main__] === Start processing table: materials ===
+2025-12-16 09:34:25 [INFO] [app.db] Ensuring target table exists: materials
+2025-12-16 09:34:25 [INFO] [app.db] Table materials is ready in target DB
+2025-12-16 09:34:25 [INFO] [app.db] Fetching ALL rows from origin table materials
+2025-12-16 09:34:25 [INFO] [app.db] Fetched 70 rows from origin table materials
+2025-12-16 09:34:25 [INFO] [__main__] Total rows to process in materials: 70
+2025-12-16 09:36:29 [INFO] [app.db] Inserting 50 vector rows into target table materials
+2025-12-16 09:36:29 [INFO] [app.db] Inserted 50 rows into materials successfully
+2025-12-16 09:36:29 [INFO] [__main__] [materials] Inserted batch of 50 rows (up to row 50)
+2025-12-16 09:36:49 [INFO] [app.db] Inserting 20 vector rows into target table materials
+2025-12-16 09:36:49 [INFO] [app.db] Inserted 20 rows into materials successfully
+2025-12-16 09:36:49 [INFO] [__main__] [materials] Inserted final batch of 20 rows
+2025-12-16 09:36:49 [INFO] [__main__] === Done processing table: materials ===
+2025-12-16 09:36:49 [INFO] [__main__] All tables processed successfully
+2025-12-16 09:36:50 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 09:36:50 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 09:36:50 [INFO] [app.db] Found 1 tables in origin DB: ['materials']
+2025-12-16 09:36:50 [INFO] [__main__] === Start processing table: materials ===
+2025-12-16 09:36:50 [INFO] [app.db] Ensuring target table exists: materials
+2025-12-16 09:36:50 [INFO] [app.db] Table materials is ready in target DB
+2025-12-16 09:36:50 [INFO] [app.db] Fetching ALL rows from origin table materials
+2025-12-16 09:36:50 [INFO] [app.db] Fetched 70 rows from origin table materials
+2025-12-16 09:36:50 [INFO] [__main__] Total rows to process in materials: 70
+2025-12-16 09:38:54 [INFO] [app.db] Inserting 50 vector rows into target table materials
+2025-12-16 09:38:54 [INFO] [app.db] Inserted 50 rows into materials successfully
+2025-12-16 09:38:54 [INFO] [__main__] [materials] Inserted batch of 50 rows (up to row 50)
+2025-12-16 09:39:14 [INFO] [app.db] Inserting 20 vector rows into target table materials
+2025-12-16 09:39:15 [INFO] [app.db] Inserted 20 rows into materials successfully
+2025-12-16 09:39:15 [INFO] [__main__] [materials] Inserted final batch of 20 rows
+2025-12-16 09:39:15 [INFO] [__main__] === Done processing table: materials ===
+2025-12-16 09:39:15 [INFO] [__main__] All tables processed successfully
+2025-12-16 09:39:15 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 09:39:15 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 09:39:15 [INFO] [app.db] Found 1 tables in origin DB: ['materials']
+2025-12-16 09:39:15 [INFO] [__main__] === Start processing table: materials ===
+2025-12-16 09:39:15 [INFO] [app.db] Ensuring target table exists: materials
+2025-12-16 09:39:16 [INFO] [app.db] Table materials is ready in target DB
+2025-12-16 09:39:16 [INFO] [app.db] Fetching ALL rows from origin table materials
+2025-12-16 09:39:16 [INFO] [app.db] Fetched 70 rows from origin table materials
+2025-12-16 09:39:16 [INFO] [__main__] Total rows to process in materials: 70
+2025-12-16 09:41:19 [INFO] [app.db] Inserting 50 vector rows into target table materials
+2025-12-16 09:41:20 [INFO] [app.db] Inserted 50 rows into materials successfully
+2025-12-16 09:41:20 [INFO] [__main__] [materials] Inserted batch of 50 rows (up to row 50)
+2025-12-16 09:41:40 [INFO] [app.db] Inserting 20 vector rows into target table materials
+2025-12-16 09:41:40 [INFO] [app.db] Inserted 20 rows into materials successfully
+2025-12-16 09:41:40 [INFO] [__main__] [materials] Inserted final batch of 20 rows
+2025-12-16 09:41:40 [INFO] [__main__] === Done processing table: materials ===
+2025-12-16 09:41:40 [INFO] [__main__] All tables processed successfully
+2025-12-16 09:41:41 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 09:41:41 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 09:41:41 [INFO] [app.db] Found 1 tables in origin DB: ['materials']
+2025-12-16 09:41:41 [INFO] [__main__] === Start processing table: materials ===
+2025-12-16 09:41:41 [INFO] [app.db] Ensuring target table exists: materials
+2025-12-16 09:41:41 [INFO] [app.db] Table materials is ready in target DB
+2025-12-16 09:41:41 [INFO] [app.db] Fetching ALL rows from origin table materials
+2025-12-16 09:41:41 [INFO] [app.db] Fetched 70 rows from origin table materials
+2025-12-16 09:41:41 [INFO] [__main__] Total rows to process in materials: 70
+2025-12-16 09:43:44 [INFO] [app.db] Inserting 50 vector rows into target table materials
+2025-12-16 09:43:45 [INFO] [app.db] Inserted 50 rows into materials successfully
+2025-12-16 09:43:45 [INFO] [__main__] [materials] Inserted batch of 50 rows (up to row 50)
+2025-12-16 09:44:04 [INFO] [app.db] Inserting 20 vector rows into target table materials
+2025-12-16 09:44:04 [INFO] [app.db] Inserted 20 rows into materials successfully
+2025-12-16 09:44:04 [INFO] [__main__] [materials] Inserted final batch of 20 rows
+2025-12-16 09:44:04 [INFO] [__main__] === Done processing table: materials ===
+2025-12-16 09:44:04 [INFO] [__main__] All tables processed successfully
+2025-12-16 09:44:05 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 09:44:05 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 09:44:05 [INFO] [app.db] Found 1 tables in origin DB: ['materials']
+2025-12-16 09:44:05 [INFO] [__main__] === Start processing table: materials ===
+2025-12-16 09:44:05 [INFO] [app.db] Ensuring target table exists: materials
+2025-12-16 09:44:05 [INFO] [app.db] Table materials is ready in target DB
+2025-12-16 09:44:05 [INFO] [app.db] Fetching ALL rows from origin table materials
+2025-12-16 09:44:05 [INFO] [app.db] Fetched 70 rows from origin table materials
+2025-12-16 09:44:05 [INFO] [__main__] Total rows to process in materials: 70
+2025-12-16 09:46:07 [INFO] [app.db] Inserting 50 vector rows into target table materials
+2025-12-16 09:46:08 [INFO] [app.db] Inserted 50 rows into materials successfully
+2025-12-16 09:46:08 [INFO] [__main__] [materials] Inserted batch of 50 rows (up to row 50)
+2025-12-16 09:46:27 [INFO] [app.db] Inserting 20 vector rows into target table materials
+2025-12-16 09:46:28 [INFO] [app.db] Inserted 20 rows into materials successfully
+2025-12-16 09:46:28 [INFO] [__main__] [materials] Inserted final batch of 20 rows
+2025-12-16 09:46:28 [INFO] [__main__] === Done processing table: materials ===
+2025-12-16 09:46:28 [INFO] [__main__] All tables processed successfully
+2025-12-16 09:46:28 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 09:46:28 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 09:46:28 [INFO] [app.db] Found 1 tables in origin DB: ['materials']
+2025-12-16 09:46:28 [INFO] [__main__] === Start processing table: materials ===
+2025-12-16 09:46:28 [INFO] [app.db] Ensuring target table exists: materials
+2025-12-16 09:46:28 [INFO] [app.db] Table materials is ready in target DB
+2025-12-16 09:46:28 [INFO] [app.db] Fetching ALL rows from origin table materials
+2025-12-16 09:46:28 [INFO] [app.db] Fetched 70 rows from origin table materials
+2025-12-16 09:46:28 [INFO] [__main__] Total rows to process in materials: 70
+2025-12-16 09:48:30 [INFO] [app.db] Inserting 50 vector rows into target table materials
+2025-12-16 09:48:31 [INFO] [app.db] Inserted 50 rows into materials successfully
+2025-12-16 09:48:31 [INFO] [__main__] [materials] Inserted batch of 50 rows (up to row 50)
+2025-12-16 09:48:50 [INFO] [app.db] Inserting 20 vector rows into target table materials
+2025-12-16 09:48:51 [INFO] [app.db] Inserted 20 rows into materials successfully
+2025-12-16 09:48:51 [INFO] [__main__] [materials] Inserted final batch of 20 rows
+2025-12-16 09:48:51 [INFO] [__main__] === Done processing table: materials ===
+2025-12-16 09:48:51 [INFO] [__main__] All tables processed successfully
+2025-12-16 09:48:51 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 09:48:51 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 09:48:51 [INFO] [app.db] Found 1 tables in origin DB: ['materials']
+2025-12-16 09:48:51 [INFO] [__main__] === Start processing table: materials ===
+2025-12-16 09:48:51 [INFO] [app.db] Ensuring target table exists: materials
+2025-12-16 09:48:51 [INFO] [app.db] Table materials is ready in target DB
+2025-12-16 09:48:51 [INFO] [app.db] Fetching ALL rows from origin table materials
+2025-12-16 09:48:51 [INFO] [app.db] Fetched 70 rows from origin table materials
+2025-12-16 09:48:51 [INFO] [__main__] Total rows to process in materials: 70
+2025-12-16 09:50:53 [INFO] [app.db] Inserting 50 vector rows into target table materials
+2025-12-16 09:50:53 [INFO] [app.db] Inserted 50 rows into materials successfully
+2025-12-16 09:50:53 [INFO] [__main__] [materials] Inserted batch of 50 rows (up to row 50)
+2025-12-16 09:51:13 [INFO] [app.db] Inserting 20 vector rows into target table materials
+2025-12-16 09:51:13 [INFO] [app.db] Inserted 20 rows into materials successfully
+2025-12-16 09:51:13 [INFO] [__main__] [materials] Inserted final batch of 20 rows
+2025-12-16 09:51:13 [INFO] [__main__] === Done processing table: materials ===
+2025-12-16 09:51:13 [INFO] [__main__] All tables processed successfully
+2025-12-16 09:51:13 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 09:51:13 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 09:51:13 [INFO] [app.db] Found 1 tables in origin DB: ['materials']
+2025-12-16 09:51:13 [INFO] [__main__] === Start processing table: materials ===
+2025-12-16 09:51:13 [INFO] [app.db] Ensuring target table exists: materials
+2025-12-16 09:51:13 [INFO] [app.db] Table materials is ready in target DB
+2025-12-16 09:51:13 [INFO] [app.db] Fetching ALL rows from origin table materials
+2025-12-16 09:51:13 [INFO] [app.db] Fetched 70 rows from origin table materials
+2025-12-16 09:51:13 [INFO] [__main__] Total rows to process in materials: 70
+2025-12-16 09:57:01 [INFO] [app.db] Inserting 50 vector rows into target table materials
+2025-12-16 09:57:01 [INFO] [app.db] Inserted 50 rows into materials successfully
+2025-12-16 09:57:01 [INFO] [__main__] [materials] Inserted batch of 50 rows (up to row 50)
+2025-12-16 09:57:21 [INFO] [app.db] Inserting 20 vector rows into target table materials
+2025-12-16 09:57:21 [INFO] [app.db] Inserted 20 rows into materials successfully
+2025-12-16 09:57:21 [INFO] [__main__] [materials] Inserted final batch of 20 rows
+2025-12-16 09:57:21 [INFO] [__main__] === Done processing table: materials ===
+2025-12-16 09:57:21 [INFO] [__main__] All tables processed successfully
+2025-12-16 09:57:22 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 09:57:22 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 09:57:22 [INFO] [app.db] Found 1 tables in origin DB: ['materials']
+2025-12-16 09:57:22 [INFO] [__main__] === Start processing table: materials ===
+2025-12-16 09:57:22 [INFO] [app.db] Ensuring target table exists: materials
+2025-12-16 09:57:22 [INFO] [app.db] Table materials is ready in target DB
+2025-12-16 09:57:22 [INFO] [app.db] Fetching ALL rows from origin table materials
+2025-12-16 09:57:22 [INFO] [app.db] Fetched 70 rows from origin table materials
+2025-12-16 09:57:22 [INFO] [__main__] Total rows to process in materials: 70

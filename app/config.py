@@ -17,12 +17,20 @@ class Settings:
     ORIGIN_DB_NAME = os.getenv("ORIGIN_DB_NAME", "PTHSP")
     ORIGIN_DB_USER = os.getenv("ORIGIN_DB_USER", "postgres")
     ORIGIN_DB_PASSWORD = os.getenv("ORIGIN_DB_PASSWORD", "postgres")
+    # optional: restrict to a specific schema; empty means all user schemas
+    ORIGIN_DB_SCHEMA = os.getenv("ORIGIN_DB_SCHEMA", "")
 
     # embedding model
     APP_EMBEDDING_MODEL = os.getenv("APP_EMBEDDING_MODEL", "qwen3-embedding:latest")
 
+    # embedding chunking (to avoid model context overflow)
+    # Max characters per chunk sent to Ollama embeddings
+    EMBEDDING_CHUNK_SIZE = int(os.getenv("EMBEDDING_CHUNK_SIZE", "3000"))
+    # Overlap in characters between consecutive chunks
+    EMBEDDING_CHUNK_OVERLAP = int(os.getenv("EMBEDDING_CHUNK_OVERLAP", "200"))
+
     # ollama
-    OLLAMA_URL = os.getenv("OLLAMA_URL", "http://host.docker.internal:11434")
+    OLLAMA_HOST = os.getenv("OLLAMA_HOST")
 
 
 settings = Settings()

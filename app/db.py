@@ -2,9 +2,13 @@ from sqlalchemy import create_engine, text
 from sqlalchemy.engine import Engine
 from datetime import datetime
 from typing import List, Any, Dict
+import json
 
 from .config import settings
-import json
+from .logger import setup_logger
+
+logger = setup_logger(__name__)
+
 
 def make_pg_url(user, password, host, port, db):
     return f"postgresql+psycopg2://{user}:{password}@{host}:{port}/{db}"
@@ -30,9 +34,18 @@ target_engine: Engine = create_engine(
     )
 )
 
+logger.info(
+    "Origin DB connected to %s:%s/%s, Target DB connected to %s:%s/%s",
+    settings.ORIGIN_DB_HOST,
+    settings.ORIGIN_DB_PORT,
+    settings.ORIGIN_DB_NAME,
+    settings.APP_PG_HOST,
+    settings.APP_PG_PORT,
+    settings.APP_PG_DATABASE,
+)
+
 
 def get_origin_tables() -> List[str]:
-    """Lấy danh sách bảng từ DB PTHSP (bỏ các bảng hệ thống)."""
     sql = """
     SELECT tablename
     FROM pg_tables
@@ -40,14 +53,13 @@ def get_origin_tables() -> List[str]:
     """
     with origin_engine.connect() as conn:
         rows = conn.execute(text(sql)).fetchall()
-    return [r[0] for r in rows]
+    tables = [r[0] for r in rows]
+    logger.info("Found %d tables in origin DB: %s", len(tables), tables)
+    return tables
 
 
 def ensure_target_table(table_name: str):
-    """
-    Đảm bảo trong ultimate_advisor có bảng với tên table_name
-    có cấu trúc: id | original_data | content_text | embedding | created_at
-    """
+    logger.info("Ensuring target table exists: %s", table_name)
     create_sql = f"""
     CREATE TABLE IF NOT EXISTS public."{table_name}" (
         id BIGSERIAL PRIMARY KEY,
@@ -59,17 +71,22 @@ def ensure_target_table(table_name: str):
     """
     with target_engine.begin() as conn:
         conn.execute(text(create_sql))
+    logger.info("Table %s is ready in target DB", table_name)
 
 
 def fetch_rows_from_origin(table_name: str, limit: int | None = None):
-    """Lấy toàn bộ (hoặc limit) dữ liệu từ bảng nguồn."""
     sql = f'SELECT * FROM public."{table_name}"'
     if limit:
         sql += f" LIMIT {limit}"
+        logger.info("Fetching up to %d rows from origin table %s", limit, table_name)
+    else:
+        logger.info("Fetching ALL rows from origin table %s", table_name)
+
     with origin_engine.connect() as conn:
         result = conn.execute(text(sql))
         rows = result.fetchall()
         columns = result.keys()
+    logger.info("Fetched %d rows from origin table %s", len(rows), table_name)
     return columns, rows
 
 
@@ -77,27 +94,10 @@ def insert_vector_rows(
     table_name: str,
     rows: List[Dict[str, Any]],
 ):
-    """Ghi batch dữ liệu đã embedding sang bảng vector."""
     if not rows:
+        logger.info("No rows to insert into %s", table_name)
         return
 
-    insert_sql = f"""
-    INSERT INTO public."{table_name}" (original_data, content_text, embedding, created_at)
-    VALUES (:original_data, :content_text, :embedding, :created_at)
-    """
-    with target_engine.begin() as conn:
-        conn.execute(text(insert_sql), rows)
-
-
-def insert_vector_rows(
-    table_name: str,
-    rows: List[Dict[str, Any]],
-):
-    """Ghi batch dữ liệu đã embedding sang bảng vector."""
-    if not rows:
-        return
-
-    # Chuyển original_data (dict) -> JSON string
     serialized_rows = []
     for r in rows:
         r = r.copy()
@@ -105,9 +105,11 @@ def insert_vector_rows(
             r["original_data"] = json.dumps(r["original_data"], ensure_ascii=False)
         serialized_rows.append(r)
 
+    logger.info("Inserting %d vector rows into target table %s", len(serialized_rows), table_name)
     insert_sql = f"""
     INSERT INTO public."{table_name}" (original_data, content_text, embedding, created_at)
     VALUES (:original_data, :content_text, :embedding, :created_at)
     """
     with target_engine.begin() as conn:
         conn.execute(text(insert_sql), serialized_rows)
+    logger.info("Inserted %d rows into %s successfully", len(serialized_rows), table_name)

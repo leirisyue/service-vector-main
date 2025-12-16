@@ -1,0 +1,18 @@
+2025-12-16 14:39:30 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 14:39:30 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 14:39:30 [INFO] [app.db] Found 1 tables in origin DB: ['materials']
+2025-12-16 14:39:30 [INFO] [__main__] === Start processing table: materials ===
+2025-12-16 14:39:30 [INFO] [app.db] Ensuring target table exists: materials
+2025-12-16 14:39:30 [INFO] [app.db] Table materials is ready in target DB
+2025-12-16 14:39:30 [INFO] [app.db] Fetching ALL rows from origin table materials
+2025-12-16 14:39:30 [INFO] [app.db] Fetched 70 rows from origin table materials
+2025-12-16 14:39:30 [INFO] [__main__] Total rows to process in materials: 70
+2025-12-16 14:40:00 [INFO] [app.db] Origin DB connected to host.docker.internal:5432/PTHSP_backup, Target DB connected to host.docker.internal:5432/vectorDB
+2025-12-16 14:40:00 [INFO] [__main__] Starting RAG vector build process
+2025-12-16 14:40:00 [INFO] [app.db] Found 1 tables in origin DB: ['materials']
+2025-12-16 14:40:00 [INFO] [__main__] === Start processing table: materials ===
+2025-12-16 14:40:00 [INFO] [app.db] Ensuring target table exists: materials
+2025-12-16 14:40:00 [INFO] [app.db] Table materials is ready in target DB
+2025-12-16 14:40:00 [INFO] [app.db] Fetching ALL rows from origin table materials
+2025-12-16 14:40:00 [INFO] [app.db] Fetched 70 rows from origin table materials
+2025-12-16 14:40:00 [INFO] [__main__] Total rows to process in materials: 70
